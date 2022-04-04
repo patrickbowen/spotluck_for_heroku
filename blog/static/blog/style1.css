@@ -64,6 +64,7 @@ body {
   height: 80px;
   width: auto;
 }
+
 /*header{
     border: orange solid;
     position: relative;
@@ -125,13 +126,16 @@ header .navbar a:hover {
   background-position: center;
   position: relative;
 }
+
 .MOD .content {
   flex: 1 1 40rem;
   padding-top: 1rem;
 }
+
 .MOD .slideshow-container {
   flex: 1 1 40rem;
 }
+
 .MOD .slideshow-container .mySlides {
   width: 100%;
   padding: 1rem;
@@ -236,8 +240,7 @@ header .navbar a:hover {
   color: #fff;
 }
 
-.slideimg {
-}
+.slideimg {}
 
 .order .row {
   padding: 2rem;
@@ -303,6 +306,7 @@ header .navbar a:hover {
   background: orange;
   text-align: center;
 }
+
 .social {
   max-height: 5vh;
   width: auto;
@@ -413,7 +417,6 @@ html {
   position: absolute;
   top: 0;
   left: 0px;
-  display: flex;
   justify-content: center;
   align-items: center;
   display: none;
@@ -426,6 +429,7 @@ html {
   border-radius: 4px;
   position: relative;
 }
+
 .popup .popup-content form {
   flex: 1 1 50rem;
   padding: 1rem;
@@ -459,6 +463,7 @@ html {
 .popheading span {
   color: var(--red);
 }
+
 .popheading {
   display: flex;
   justify-content: center;
@@ -482,14 +487,17 @@ html {
   padding: 15px 12px;
   position: relative;
 }
+
 .box-container:hover {
   background: lavender;
   transition: all 0.7s ease-in-out;
 }
+
 .box-container:hover #card-img {
   transform: scale(1.1);
   transition: all 0.7s ease-in-out;
 }
+
 .card-item {
   cursor: pointer;
 }
@@ -503,6 +511,7 @@ html {
   cursor: pointer;
   opacity: 0;
 }
+
 .box-container:hover #add-to-cart {
   transition: all 0.7s ease-in-out;
   opacity: 1;
@@ -519,6 +528,7 @@ html {
   display: none;
   transition: all 0.3s ease-in-out;
 }
+
 .details {
   position: relative;
   height: 100vh;
@@ -526,6 +536,7 @@ html {
   align-items: center;
   justify-content: center;
 }
+
 .items-detail {
   position: relative;
   display: grid;
@@ -535,10 +546,12 @@ html {
   width: 60vw;
   height: 70vh;
 }
+
 .image-container {
   padding: 2rem;
   margin-top: 3rem;
 }
+
 #details-img {
   width: 15rem;
   height: 15rem;
@@ -549,30 +562,36 @@ html {
   color: teal;
   font-size: 2.5rem;
 }
+
 #detail-price {
   margin-top: 1.5rem;
   color: rgb(199, 110, 110);
   font-size: 1.5rem;
 }
+
 #you-save {
   font-size: 1.2rem;
 
   color: rgb(106, 146, 161);
 }
+
 #delievery {
   margin-top: 1.5rem;
   font-size: 1.2rem;
 }
+
 #spec {
   margin-top: 0.5rem;
   font-size: 1.2rem;
 }
+
 .items-detail ul li {
   position: relative;
   margin: 0.5rem 0;
   font-family: sans-serif;
   list-style-position: inside;
 }
+
 .items-detail button {
   font-size: 1.5rem;
   padding: 0.3rem;
@@ -581,18 +600,22 @@ html {
   outline: none;
   border: none;
 }
+
 #carts {
   background: rgb(238, 166, 12);
   color: white;
 }
+
 #carts:active {
   background: white;
   color: rgb(238, 166, 12);
 }
+
 #buy {
   background: rgb(167, 179, 5);
   color: white;
 }
+
 #buy:active {
   background: white;
   color: rgb(167, 179, 5);
@@ -603,12 +626,14 @@ html {
   display: none;
   margin-top: 5rem;
 }
+
 #cart-title {
   font-size: 3.5rem;
   text-align: center;
   font-family: sans-serif;
   color: rgb(146, 78, 78);
 }
+
 #empty-cart {
   display: none;
   margin-top: 4rem;
@@ -626,6 +651,7 @@ html {
   padding: 1rem;
   grid-template-columns: repeat(5, 1fr);
 }
+
 .cart-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -634,16 +660,19 @@ html {
   padding: 0.5rem 1rem;
   background: white;
 }
+
 .list-name,
 .pay,
 .quantity,
 #remove {
   padding: 1.2rem 0.2rem;
 }
+
 #list-img {
   width: 5rem;
   height: 5rem;
 }
+
 #total {
   display: none;
   position: relative;
@@ -658,6 +687,7 @@ html {
   letter-spacing: 0.1rem;
   margin-bottom: 1.5rem;
 }
+
 #you-saved {
   color: rgb(101, 99, 102);
 }
