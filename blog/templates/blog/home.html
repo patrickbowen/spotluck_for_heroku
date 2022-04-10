@@ -20,10 +20,10 @@
             <a href="#gallery">Gallery</a>
             <a href="#review">Review</a>
             <a href="#order">Order</a>
-            <a href="#" id="cart"><i class="fa fa-shopping-cart"></i></a>
-            <a href="#" id="chefadd">Add a Dish</a>
             <div class="navbar-nav">
                 {% if user.is_authenticated %}
+                <a href="#" id="cart"><i class="fa fa-shopping-cart"></i></a>
+                <a href="{% url 'post-create' %}" id="chefadd">Add a Dish</a>
                 <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
                 <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
                 {% else %}
@@ -82,60 +82,60 @@
             <h1 class="heading"> <span> All </span> Meals </h1>
 
         <div class="box-container">
+            {% block content %}
+            {% for post in posts %}
+            <article class="media content-section">
+                <div class="media-body">
+                    <div class="box" id="2">
+                        <span class="price"> $5 - $20 </span>
+                    <div class= "card-item">
+                        <img src="images/p-3.jpg" alt="">
+                    <div class="article-metadata">
+                        <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+                    </div>
+                    <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+                    <p class="article-content">{{ post.content }}</p>
+                    <a class="mr-2" href="#">{{ post.author }}</a>
+                    </div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <i class = "fa fa-shopping-cart" id = "add-to-cart"></i>
+                        <a href="#" class="btn">order now</a>
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+            {% endblock content %}
 
-            <div class="box" id="0" >
+
+            <div class="box "id="nonvisible">
                 <span class="price"> $5 - $20 </span>
-            <div class= "card-item">
-                <img src="images/p-1.jpeg">
-                <h3>tasty burger</h3>
-            </div>    
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
+                <div class= "card-item">
+                 <img id="display_image">
+                 <h3>cold ice-cream</h3>
+                </div>
+                <div class="stars" >
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
                     <i class="far fa-star"></i>
                 </div>
                 <i class = "fa fa-shopping-cart" id = "add-to-cart"></i>
                 <h2>Made by</h2>
                 <a href="#" class="btn">order now</a>
             </div>
-            <div class="box" id="1">
-                <span class="price"> $5 - $20 </span>
-            <div class= "card-item">
-                <img src="images/p-2.jpg" alt="">
-                <h3>tasty cakes</h3>
-            </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <i class = "fa fa-shopping-cart" id = "add-to-cart"></i>
-                <h2>Made by</h2>
-                <a href="#" class="btn">order now</a>
-            </div>
-            
-            <div class="box" id="3">
-                <span class="price"> $5 - $20 </span>
-            <div class= "card-item">
-                <img src="images/p-4.jpg" alt="">
-                <h3>tasty cupcakes</h3>
-            </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                </div>
-                <i class = "fa fa-shopping-cart" id = "add-to-cart"></i>
-                <h2>Made by</h2>
-                <a href="#" class="btn">order now</a>
-            </div>
+
+
+        
         </div>
+
+        
     </section>
 
             
@@ -191,28 +191,6 @@
     </main>
 
 <!-- Pop up to add meal-->
-
-<div class = "popup">
-
-
-    <div class = "popup-content">
-        <div class="close">+</div>
-        <h1 class="popheading"> <span> Display  </span> Meal!</h1>
-        <form action="">
-            
-            <input id="dishname" type="text" placeholder="Name of Dish">
-            <input id="pricee" type="number" placeholder="Price of Dish">
-           
-            <input id="chefname" type="text" placeholder="Your Account Name">
-            
-            <textarea placeholder="address" name="" id="mealdesc" cols="30" rows="10"></textarea>
-            <input type="file" id="image_input">
-            <a href="#" class="btn" id="submitbtn">Submit</a>
-            
-
-        </form>
-    </div>
-</div>
 
 
 <div id="details-page">
@@ -310,10 +288,10 @@
             var file = new Blob([data_string],{type:"text"});
             var anchor = document.createElement("a")
             anchor.href = URL.createObjectURL(file);
-            anchor.download = "save.txt";
+            anchor.download = "save.txt";'
             anchor.click();
 
         }
-
     </script>
+
 
