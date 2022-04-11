@@ -21,3 +21,14 @@ class Items(models.Model):
 
     def __str__(self):
         return self.name
+
+class Orders(models.Model):
+    o_id = models.IntegerField()
+    #b_id = models.ForeignKey(Users, on_delete=models.DO_NOTHING)
+    #s_id = models.ForeignKey(Users, on_delete=models.DO_NOTHING)
+    #PURCHASED_CHOICES = [(YES, 'Yes'), (NO, 'No')]
+    #purchased = models.CharField(choices=PURCHASED_CHOICES, default=NO) ########################################
+    purchased = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.o_id
