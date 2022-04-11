@@ -10,9 +10,11 @@ document.querySelector("#chefadd").addEventListener("click", function () {
   document.querySelector(".popup").style.display = "flex";
 });
 
+
 document.querySelector(".close").addEventListener("click", function () {
   document.querySelector(".popup").style.display = "none";
 });
+
 
 /* append dish to all meals upond form submittion*/
 document.querySelector("#submitbtn").addEventListener("click", function () {
