@@ -135,3 +135,7 @@ LOGIN_URL = "login"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEIDA_URL = "/media/"
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
